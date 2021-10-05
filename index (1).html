@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500&display=swap');
+        @-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+        ::-webkit-scrollbar {
+            width: 20px;
+            height: 6px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            
+            border-radius: 10px;
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+           
+            border-radius: 10px;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+            }          
+            
+            
+
+
+        body{
+            background-image: url(https://i.ibb.co/qRSHCVM/unknown.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            font-family: 'Noto Sans Display', sans-serif;
+        }
+        .main{
+            height: 100vh;
+            width: 100%;
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+        }
+        .header{
+            height: 15%;
+            width: 100%;
+            background-color: transparent;
+        }
+        .biodata{
+            height: 70%;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+
+        }
+        .left{
+            width: 15%;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .arrrow_left{
+            width: 20%;
+            height: 30%;
+            background-color: black;
+
+        }
+        .right{
+            width: 15%;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+        .box{
+            height: 100%;
+            width: 70%;
+            background-color: transparent;
+            justify-content: center;
+           align-items: center;
+           display: flex;
+           
+        }
+        .cards{
+            width: 80%;
+            height: 100%;
+            margin: 0;
+            border-radius: 1rem;
+  
+            
+            
+            
+            
+
+            overflow-y: hidden;
+            
+            white-space: nowrap;
+            font-size: 0;
+            scroll-behavior: smooth;
+
+            
+
+        }
+        .card {
+            margin-top: 10%;
+        width: 250px;
+        height: 95%;
+        display: inline-block;
+        background-color: whitesmoke;
+        margin: 1%;
+        border-radius: 1rem;
+        color: black;
+        font-family: poppins, sans-serif;
+        font-size: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        
+        
+        
+
+
+        }
+        .content{
+            width: 100%;
+            
+            height: 100%;
+            display: flexbox;
+            background-color: transparent;
+            
+        }
+        .content_a{
+            font-size: 1.1rem;
+            height: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Noto Sans Display', sans-serif;
+            background-color: transparent;
+            color: whitesmoke;
+
+        }
+        .content_b{
+            font-size: 1.1rem;
+            height: 60%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            font-family: 'Noto Sans Display', sans-serif;
+            color: whitesmoke;
+        }
+        .card:first-child{
+            margin-left: 10px;
+        }
+        .connect{
+            height: 15%;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .arrow_button{
+            
+            width: 60px;
+            height: 60px;
+            border-radius: 50rem;
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            font-size: 1rem;
+            color: black;
+            
+
+        }
+        .arrow_button:hover{
+            background-color: #36393F;
+            color: whitesmoke;
+            transition: 1s;
+            -webkit-animation: swing 1s ease;
+            animation: swing 1s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 2;
+
+        }
+        .social_media{
+            height: 55%;
+            width: 50%;
+            background-color: #36393F;
+            border-radius: 0.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+        }
+        .icon{
+            width: 20%;
+            margin: 0;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon_container{
+            height: 85%;
+            width: 40%;
+            background-color: black;
+            border-radius: 0.3rem;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+
+
+        }
+        .social_media:hover{
+            
+            color: black;
+            transition: 0.9s;
+            
+        box-shadow: inset 0 0 0 25px whitesmoke;
+
+        }
+        .social_media:hover .icons{
+            color: black;
+            transition: 0.9s;
+        }
+        .social_media:hover .icon_container{
+           
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            color: black;
+            box-shadow: inset 0 0 0 25px white;
+
+
+        }
+        .icon_container:hover .icons{
+            -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        color: black;
+        }
+        .icons{
+            color: whitesmoke;
+
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/cd4563c3b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="header"></div>
+        <div class="biodata">
+            <div class="left">
+                <div class="arrow_left"><button class="arrow_button"  id="left_slide"><h1 ><</h1></button></div>
+            </div>
+            <div class="box">
+                    <div class="cards" id="cards">
+                        <div class="card" style="background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);">
+                            <div class="content">
+                                <div class="content_a">Name</div>
+                                <div class="content_b">Agastya N Nair</div>
+                            </div>
+                         </div>
+                   
+                        <div class="card" style="background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);">
+                            <div class="content">
+                                <div class="content_a">Class</div>
+                                <div class="content_b">IX-A</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);">
+                            <div class="content">
+                                <div class="content_a">Father's Name</div>
+                                <div class="content_b">Navin Nair </div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);">
+                            <div class="content">
+                                <div class="content_a">Mother's Name</div>
+                                <div class="content_b">Sajna Navin</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);">
+                            <div class="content">
+                                <div class="content_a">Date Of Birth</div>
+                                <div class="content_b">22/7/2007</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <div class="content">
+                                <div class="content_a">Blood Group</div>
+                                <div class="content_b">O+</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);"> 
+                            <div class="content">
+                                <div class="content_a">Email</div>
+                                <div class="content_b">Agastyanavin@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);">
+                            <div class="content">
+                                <div class="content_a">Phone Number</div>
+                                <div class="content_b">9946500319</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);">
+                            <div class="content">
+                                <div class="content_a">Address</div>
+                                <div class="content_b">Sathgamaya, sharadhanagar,<br> ayyappankavu, Palakkad</div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="background-image: linear-gradient(to top, #09203f 0%, #537895 100%);">
+                            <div class="content">
+                                <div class="content_a">Language Known</div>
+                                <div class="content_b">English, malayalam , Hindi</div>
+                            </div>
+                        </div>
+                        <div class="card" style=" color:black; background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);">
+                            <div class="content">
+                                <div class="content_a">Strength</div>
+                                <div class="content_b">sincere</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);">
+                            <div class="content">
+                                <div class="content_a">Hobbies</div>
+                                <div class="content_b">playing videogames , cricket</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);">
+                            <div class="content">
+                                <div class="content_a">Date</div>
+                                <div class="content_b">04/10/2021</div>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);">
+                            <div class="content">
+                                <div class="content_a">Name</div>
+                                <div class="content_b">Agastya N Nair</div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="right">
+               <div class="arrow_left"><button class="arrow_button"  id="right_slide"><h1 >></h1></button></div>
+            </div>
+        </div>
+        <div class="connect">
+            <div class="social_media">
+                <div class="icon">
+                    <div class="icon_container">
+                       <a href="https://discordapp.com/users/894514330840760361" style="text-decoration: none;"><i class="fab fa-discord icons"></i></a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="icon_container">
+                        <a href="mailto:Agastyanavin@gmail.com" style="text-decoration: none;"><i class="fas fa-envelope icons"></i></a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="icon_container">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="text-decoration: none;"><i class="fab fa-youtube icons"></i></a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="icon_container">
+                        <a href="https://wa.me/+919946500319" style="text-decoration: none;"><i class="fab fa-whatsapp icons"></i></a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="icon_container">
+                        <a href="https://github.com/Notlemonhead" style="text-decoration: none;"><i class="fab fa-github icons"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const buttonRight = document.getElementById('right_slide');
+    const buttonLeft = document.getElementById('left_slide');
+
+    buttonRight.onclick = function () {
+      document.getElementById('cards').scrollLeft += 300;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('cards').scrollLeft -= 300;
+    };
+    </script>
+</body>
+</html>
